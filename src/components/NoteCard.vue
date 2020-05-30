@@ -54,9 +54,9 @@ export default {
     }
   },
   methods: {
-    deleteNote() {
-      this.$store.dispatch('deleteNote', this.note) &&
-        this.$emit('noteDeleted', this.note)
+    async deleteNote() {
+      await this.$store.dispatch('deleteNote', this.note)
+      this.$emit('noteDeleted', this.note)
     }
   }
 }

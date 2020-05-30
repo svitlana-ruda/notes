@@ -71,9 +71,6 @@
                 disabled
               />
             </div>
-            <div>
-              <input v-model="note.id" disabled class="d-none" />
-            </div>
             <BaseButton value="submit" type="submit" :disabled="$v.$invalid"
               >Submit</BaseButton
             >

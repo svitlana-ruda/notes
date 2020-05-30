@@ -96,8 +96,8 @@ export default new Vuex.Store({
     }
   },
   getters: {
-    getCommentsById: state => {
-      return state.comments.filter(comment => comment.note_id == state.note.id)
+    getCurrentNoteComments: state => {
+      return state.comments.filter(comment => comment.note_id === state.note.id)
     }
   },
   plugins: [vuexPersist.plugin]

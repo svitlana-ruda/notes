@@ -7,9 +7,9 @@
     <div class="note-comments">
       <h4>Comments</h4>
     </div>
-    <div v-if="getCommentsById.length">
+    <div v-if="getCurrentNoteComments.length">
       <NoteComment
-        v-for="comment in getCommentsById"
+        v-for="comment in getCurrentNoteComments"
         :key="comment.id"
         :comment="comment"
       />
@@ -39,7 +39,7 @@ export default {
   },
   computed: {
     ...mapState(['note', 'comments']),
-    ...mapGetters(['getCommentsById'])
+    ...mapGetters(['getCurrentNoteComments'])
   }
 }
 </script>
